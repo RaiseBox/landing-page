@@ -38,3 +38,9 @@ Desktop.ini
 
 # Tests / cobertura (si los añades después)
 coverage/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
