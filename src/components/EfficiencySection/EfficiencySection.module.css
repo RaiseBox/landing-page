@@ -1,0 +1,106 @@
+.section {
+  padding: 128px 0;
+  background: var(--color-bg);
+}
+
+.box {
+  background: #f0f9f8;
+  border: 2px solid rgba(0, 168, 150, 0.2);
+  border-radius: var(--radius-2xl);
+  padding: 82px;
+  box-shadow: 0 32px 64px -16px rgba(0, 168, 150, 0.08);
+}
+
+.header {
+  max-width: 768px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  line-height: 1.555;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 16px 40px -8px rgba(0, 77, 64, 0.1);
+  transform: translateY(-3px);
+}
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 15px -3px rgba(0, 77, 64, 0.1), 0 4px 6px -4px rgba(0, 77, 64, 0.1);
+  flex-shrink: 0;
+}
+
+.cardIcon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.33;
+  margin-bottom: 16px;
+}
+
+.cardDesc {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  line-height: 1.625;
+}
+
+@media (max-width: 1024px) {
+  .box   { padding: 48px 40px; }
+  .title { font-size: 38px; }
+  .cards { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 0; }
+  .box     { padding: 40px 24px; }
+  .title   { font-size: 30px; }
+}
